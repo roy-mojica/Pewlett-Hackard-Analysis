@@ -5,8 +5,8 @@ dept_name varchar
 
 Dept_Emp
 -
-emp_no int pk
-dept_no varchar fk
+emp_no int pk fk -< Employees.emp_no
+dept_no varchar fk 
 from_date date
 to_date date
 
@@ -19,7 +19,7 @@ to_date date
 
 Employees
 -
-emp_no int pk fk - Dept_Emp.emp_no
+emp_no int pk fk - Salaries.emp_no
 birth_date date
 first_name varchar
 last_name varchar
@@ -28,7 +28,7 @@ hire_date date
 
 Salaries
 -
-emp_no int pk FK >- Dept_Emp.emp_no
+emp_no int pk FK >- Dept_Emp.emp_no fk -< Titles.emp_no
 salary int
 from_date date
 to_date date
